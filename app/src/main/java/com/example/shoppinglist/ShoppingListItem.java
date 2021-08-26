@@ -6,23 +6,13 @@ public class ShoppingListItem
     private String price;
     private String imgUrl;
     private int id;
-//    private boolean isExpanded;
 
     public ShoppingListItem(int id, String name, String price, String imgUrl) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.imgUrl = imgUrl;
-//        this.isExpanded = false;
     }
-
-//    public boolean isExpanded() {
-//        return isExpanded;
-//    }
-//
-//    public void setExpanded(boolean expanded) {
-//        isExpanded = expanded;
-//    }
 
     public int getId() {
         return id;
@@ -63,8 +53,6 @@ public class ShoppingListItem
                 ", price='" + price + '\'' +
                 ", imgUrl='" + imgUrl + '\'' +
                 ", id=" + id +
-                ", " +
-//                "isExpanded=" + isExpanded +
-                '}';
+                ", " + '}';
     }
 }
