@@ -88,70 +88,6 @@ public class ShoppingRecViewAdapter extends RecyclerView.Adapter<ShoppingRecView
                 .load(shoppingListItems.get(position).getImgUrl())
                 .into(holder.Img);
 
-//        holder.btnDownArrow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                ShoppingListItem shoppingListItem = shoppingListItems.get(position);
-//                shoppingListItem.setExpanded(!shoppingListItem.isExpanded());
-//                notifyItemChanged(position);
-//            }
-//        });
-//
-//        holder.btnUpArrow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                ShoppingListItem shoppingListItem = shoppingListItems.get(position);
-//                shoppingListItem.setExpanded(!shoppingListItem.isExpanded());
-//                notifyItemChanged(position);
-//            }
-//        });
-//
-//        if (shoppingListItems.get(position).isExpanded())
-//        {
-//            TransitionManager.beginDelayedTransition(holder.parent);
-//            holder.expandedRelLayout.setVisibility(View.VISIBLE);
-//            holder.btnDownArrow.setVisibility(View.GONE);
-//            holder.btnDelete.setVisibility(View.VISIBLE);
-//            holder.btnDelete.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
-//                    builder.setMessage("Are you sure you want to delete " + shoppingListItems.get(position).getName() + "?");
-//
-//                    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-////                            if (Utils.getInstance(context).removeFromShoppingListItems(shoppingListItems.get(position)))
-////                            {
-////                                shoppingListItems.remove(position);
-////                                notifyItemRemoved(position);
-////                                Toast.makeText(context, "Item Removed", Toast.LENGTH_SHORT).show();
-////                            }
-//                            shoppingListItems.remove(position);
-//                            notifyItemRemoved(position);
-//                            Toast.makeText(context, "Item Removed", Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
-//
-//                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                                // DO NOTHING
-//                        }
-//                    });
-//
-//                    builder.create().show();
-//                }
-//            });
-//        }
-//        else
-//        {
-//            TransitionManager.beginDelayedTransition(holder.parent);
-//            holder.expandedRelLayout.setVisibility(View.GONE);
-//            holder.btnDownArrow.setVisibility(View.VISIBLE);
-//        }
-    }
-
     @Override
     public int getItemCount() {
         return shoppingListItems.size();
@@ -163,20 +99,14 @@ public class ShoppingRecViewAdapter extends RecyclerView.Adapter<ShoppingRecView
         private RelativeLayout expandedRelLayout;
         private ImageView Img;
         private TextView Name, Price;
-//        private ImageView btnDownArrow, btnUpArrow;
-//        private TextView btnDelete;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             parent = itemView.findViewById(R.id.parent);
-//            expandedRelLayout = itemView.findViewById(R.id.expandedRelLayout);
             Img = itemView.findViewById(R.id.Img);
             Name = itemView.findViewById(R.id.Name);
             Price = itemView.findViewById(R.id.Price);
-//            btnDownArrow = itemView.findViewById(R.id.btnDownArrow);
-//            btnUpArrow = itemView.findViewById(R.id.btnUpArrow);
-//            btnDelete = itemView.findViewById(R.id.btnDelete);
         }
     }
 }
