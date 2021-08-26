@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="180dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/item_name"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="5dp"/>
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_marginHorizontal="5dp"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.5"
+            android:inputType="textCapSentences" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:text="@string/item_price"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/Price"
+            android:layout_marginHorizontal="5dp"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.5"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="20dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.5"
+            android:text="@string/cancel"
+            android:layout_marginHorizontal="2.5dp"/>
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="20dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.5"
+            android:layout_marginHorizontal="2.5dp"
+            android:text="@string/add" />
+    </LinearLayout>
+
+</LinearLayout>
